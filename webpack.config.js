@@ -1,6 +1,7 @@
 var path = require('path');
 
 module.exports = {
+    mode: "development",
     module: {
         rules: [
             {
@@ -25,7 +26,7 @@ module.exports = {
             }
         ]
     },
-    entry: "./app/index.js",
+    entry: "./app/app.module.js",
     output: {
         filename: "bundle.js"
     }

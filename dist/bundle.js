@@ -66,7 +66,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./app/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./app/app.module.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -197,7 +197,7 @@ eval("module.exports = \"<h3>Hello there</h3>\";\n\n//# sourceURL=webpack:///./a
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.blog = undefined;\n\nvar _angular = __webpack_require__(/*! angular */ \"./node_modules/angular/index.js\");\n\nvar _angular2 = _interopRequireDefault(_angular);\n\nvar _angularUiRouter = __webpack_require__(/*! angular-ui-router */ \"./node_modules/angular-ui-router/lib/index.js\");\n\nvar _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);\n\nvar _blog = __webpack_require__(/*! ./blog.component */ \"./app/components/blog-view/blog.component.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar blog = exports.blog = _angular2.default.module('blog', [_angularUiRouter2.default]).component('blog', _blog.BlogComponent).config(function ($stateProvider, $urlRouterProvider) {\n    $stateProvider.state('blog', {\n        url: '/blog',\n        component: 'blog'\n    });\n    $urlRouterProvider.otherwise('/');\n}).name;\n\n//# sourceURL=webpack:///./app/components/blog-view/blog.module.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.BlogModule = undefined;\n\nvar _angular = __webpack_require__(/*! angular */ \"./node_modules/angular/index.js\");\n\nvar _angular2 = _interopRequireDefault(_angular);\n\nvar _angularUiRouter = __webpack_require__(/*! angular-ui-router */ \"./node_modules/angular-ui-router/lib/index.js\");\n\nvar _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);\n\nvar _blog = __webpack_require__(/*! ./blog.component */ \"./app/components/blog-view/blog.component.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar BlogModule = exports.BlogModule = _angular2.default.module('blog', [_angularUiRouter2.default]).component('blog', _blog.BlogComponent).config(function ($stateProvider, $urlRouterProvider) {\n    'ngInject';\n\n    $stateProvider.state('blog', {\n        url: '/blog',\n        component: 'blog'\n    });\n    $urlRouterProvider.otherwise('/');\n}).name;\n\n//# sourceURL=webpack:///./app/components/blog-view/blog.module.js?");
 
 /***/ }),
 
@@ -209,7 +209,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.ComponentsModule = undefined;\n\nvar _angular = __webpack_require__(/*! angular */ \"./node_modules/angular/index.js\");\n\nvar _angular2 = _interopRequireDefault(_angular);\n\nvar _blog = __webpack_require__(/*! ./blog-view/blog.module */ \"./app/components/blog-view/blog.module.js\");\n\nvar _blog2 = _interopRequireDefault(_blog);\n\nvar _info = __webpack_require__(/*! ./info-view/info.module */ \"./app/components/info-view/info.module.js\");\n\nvar _info2 = _interopRequireDefault(_info);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar ComponentsModule = exports.ComponentsModule = _angular2.default.module('app.components', [_blog2.default, _info2.default]).name;\n\n//# sourceURL=webpack:///./app/components/components.module.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.ComponentsModule = undefined;\n\nvar _angular = __webpack_require__(/*! angular */ \"./node_modules/angular/index.js\");\n\nvar _angular2 = _interopRequireDefault(_angular);\n\nvar _blog = __webpack_require__(/*! ./blog-view/blog.module */ \"./app/components/blog-view/blog.module.js\");\n\nvar _info = __webpack_require__(/*! ./info-view/info.module */ \"./app/components/info-view/info.module.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar ComponentsModule = exports.ComponentsModule = _angular2.default.module('app.components', [_blog.BlogModule, _info.InfoModule]).name;\n\n//# sourceURL=webpack:///./app/components/components.module.js?");
 
 /***/ }),
 
@@ -244,19 +244,7 @@ eval("module.exports = \"<h3>Hello there</h3>\";\n\n//# sourceURL=webpack:///./a
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.info = undefined;\n\nvar _angular = __webpack_require__(/*! angular */ \"./node_modules/angular/index.js\");\n\nvar _angular2 = _interopRequireDefault(_angular);\n\nvar _angularUiRouter = __webpack_require__(/*! angular-ui-router */ \"./node_modules/angular-ui-router/lib/index.js\");\n\nvar _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);\n\nvar _info = __webpack_require__(/*! ./info.component */ \"./app/components/info-view/info.component.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar info = exports.info = _angular2.default.module('info', [_angularUiRouter2.default]).component('info', _info.InfoComponent).config(function ($stateProvider, $urlRouterProvider) {\n    $stateProvider.state('info', {\n        url: '/info',\n        component: 'info'\n    });\n    $urlRouterProvider.otherwise('/');\n}).name;\n\n//# sourceURL=webpack:///./app/components/info-view/info.module.js?");
-
-/***/ }),
-
-/***/ "./app/index.js":
-/*!**********************!*\
-  !*** ./app/index.js ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nvar _app = __webpack_require__(/*! ./app.module */ \"./app/app.module.js\");\n\nvar _app2 = _interopRequireDefault(_app);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nangular.bootstrap(document, ['app']);\n\n//# sourceURL=webpack:///./app/index.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.InfoModule = undefined;\n\nvar _angular = __webpack_require__(/*! angular */ \"./node_modules/angular/index.js\");\n\nvar _angular2 = _interopRequireDefault(_angular);\n\nvar _angularUiRouter = __webpack_require__(/*! angular-ui-router */ \"./node_modules/angular-ui-router/lib/index.js\");\n\nvar _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);\n\nvar _info = __webpack_require__(/*! ./info.component */ \"./app/components/info-view/info.component.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar InfoModule = exports.InfoModule = _angular2.default.module('info', [_angularUiRouter2.default]).component('info', _info.InfoComponent).config(function ($stateProvider, $urlRouterProvider) {\n    'ngInject';\n\n    $stateProvider.state('info', {\n        url: '/info',\n        component: 'info'\n    });\n    $urlRouterProvider.otherwise('/');\n}).name;\n\n//# sourceURL=webpack:///./app/components/info-view/info.module.js?");
 
 /***/ }),
 
