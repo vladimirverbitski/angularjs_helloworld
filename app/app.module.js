@@ -1,15 +1,17 @@
 import angular from 'angular';
-import { AppComponent } from './app.component';
-import { ComponentsModule } from './components/components.module';
-import { CommonModule } from './common/common.module';
+import uiRouter from  'angular-ui-router';
+
+import AppComponent from './app.component';
+import ComponentsModule from './components/components.module';
+import CommonModule from './common/common.module';
 import './app.css';
 
 export const app = angular
     .module('app', [
         ComponentsModule,
         CommonModule,
+        uiRouter
     ])
-    .config([])
     .component('app', AppComponent)
     .name;
 

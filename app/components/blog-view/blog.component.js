@@ -1,16 +1,27 @@
-'use strict';
+import templateUrl from './blog.html';
 
-describe('app.blog module', function() {
-
-  beforeEach(module('app.blog'));
-
-  describe('blog controller', function(){
-
-    it('should ....', inject(function($controller) {
-      //spec body
-      var blogCtrl = $controller('BlogController');
-      expect(blogCtrl).toBeDefined();
-    }));
-
-  });
-});
+export const BlogComponent = {
+    templateUrl,
+    controller: class BlogComponent {
+        constructor(BlogService) {
+            'ngInject';
+            this.blogService = BlogService;
+        }
+        $onInit() {
+            this.newPost = {
+                title: '',
+                selected: false
+            };
+            this.post = [];
+            this.blogService.getPosts().then(response => this.post = response);
+        }
+        addTodo({ post }) {
+            if (!post) return;
+            this.posts.unshift(post);
+            this.newPost = {
+                title: '',
+                selected: false
+            };
+        }
+    }
+};

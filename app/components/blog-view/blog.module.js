@@ -1,14 +1,18 @@
-'use strict';
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
+import { BlogComponent } from './blog.component';
 
-angular.module('app.blog', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/blog', {
-    templateUrl: '/components/blog-view/blog.html',
-    controller: 'BlogController'
-  });
-}])
-
-.controller('BlogController', [function() {
-
-}]);
+export const blog = angular
+    .module('blog', [
+        uiRouter
+    ])
+    .component('blog', BlogComponent)
+    .config(($stateProvider, $urlRouterProvider) => {
+        $stateProvider
+            .state('blog', {
+                url: '/blog',
+                component: 'blog'
+            });
+        $urlRouterProvider.otherwise('/');
+    })
+    .name;

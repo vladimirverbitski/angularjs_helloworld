@@ -1,14 +1,18 @@
-'use strict';
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
+import { InfoComponent } from './info.component';
 
-angular.module('app.info', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/info', {
-    templateUrl: 'components/info-view/info.html',
-    controller: 'InfoController'
-  });
-}])
-
-.controller('InfoController', [function() {
-
-}]);
+export const info = angular
+    .module('info', [
+        uiRouter
+    ])
+    .component('info', InfoComponent)
+    .config(($stateProvider, $urlRouterProvider) => {
+        $stateProvider
+            .state('info', {
+                url: '/info',
+                component: 'info'
+            });
+        $urlRouterProvider.otherwise('/');
+    })
+    .name;

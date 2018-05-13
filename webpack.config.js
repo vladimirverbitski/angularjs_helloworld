@@ -5,7 +5,10 @@ module.exports = {
         rules: [
             {
                 test: /\.html$/,
-                loader: 'ngtemplate?relativeTo=' + (path.resolve(__dirname)) + '/app/!html'
+                loader: 'html-loader',
+                options: {
+                    minimize: true
+                }
             },
             {
                 test: /\.js?$/,
@@ -15,14 +18,15 @@ module.exports = {
                     presets: ['es2015'],
                     cacheDirectory: true
                 }
+            },
+            {
+                test: /\.css?$/,
+                loader: "css-loader"
             }
         ]
     },
-    entry: "./app/app.module.js",
+    entry: "./app/index.js",
     output: {
         filename: "bundle.js"
-    },
-    resolve: {
-        extensions: ['.css'],
     }
 }

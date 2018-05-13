@@ -1,16 +1,19 @@
-'use strict';
+import templateUrl from './info.html';
 
-describe('app.info module', function() {
-
-  beforeEach(module('app.info'));
-
-  describe('info controller', function(){
-
-    it('should ....', inject(function($controller) {
-      //spec body
-      var infoCtrl = $controller('InfoController');
-      expect(infoCtrl).toBeDefined();
-    }));
-
-  });
-});
+export const InfoComponent = {
+    templateUrl,
+    controller: class InfoComponent {
+        constructor(TodoService) {
+            'ngInject';
+            this.todoService = TodoService;
+        }
+        $onInit() {
+            this.newTodo = {
+                title: '',
+                selected: false
+            };
+            this.todos = [];
+            this.todoService.getTodos().then(response => this.todos = response);
+        }
+    }
+};
