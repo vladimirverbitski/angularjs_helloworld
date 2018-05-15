@@ -1,9 +1,9 @@
 export const AppComponent = {
     template: `
-        <header></header>
-        
-        <ui-view></ui-view>
-        
-        <footer></footer>
+        <div class="wrapper">
+            <header></header>
+            <ui-view></ui-view>
+            <footer></footer>
+        </div>
     `
 };
