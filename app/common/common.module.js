@@ -1,10 +1,10 @@
-import angular from 'angular';
-import { NavModule } from './nav/nav.module';
+import 'angular';
+import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
 
 export const CommonModule = angular
     .module('app.common', [
-        NavModule,
+        HeaderModule,
         FooterModule
     ])
     .name;

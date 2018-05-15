@@ -1,5 +1,5 @@
-import templateUrl from './blog.html';
+import template from './blog.html';
 
 export const BlogComponent = {
-    templateUrl
+    template
 };
