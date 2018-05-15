@@ -1,7 +1,12 @@
-var path = require('path');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const PATHS = {
+    src: path.resolve(__dirname, 'app'),
+    dist: path.resolve(__dirname, 'target', 'dist')
+};
 
 module.exports = {
-    mode: "development",
     module: {
         rules: [
             {
@@ -26,6 +31,12 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(PATHS.src, 'index.html'),
+            filename: 'index.html',
+        })
+    ],
     entry: "./app/app.module.js",
     output: {
         filename: "bundle.js"

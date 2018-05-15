@@ -1,18 +1,23 @@
-import angular from 'angular';
+import 'angular';
 import uiRouter from 'angular-ui-router';
-import { BlogComponent } from './blog.component';
+import {BlogComponent} from './blog.component';
 
 export const BlogModule = angular
-    .module('blog', [
+    .module('blogModule', [
         uiRouter
     ])
-    .component('blog', BlogComponent)
-    .config(($stateProvider, $urlRouterProvider) => {
+    .component('blogComponent', BlogComponent)
+    .config(($stateProvider, $urlRouterProvider, $locationProvider) => {
         'ngInject';
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+        });
         $stateProvider
-            .state('blog', {
+            .state('blogComponent', {
+                parent: 'app',
                 url: '/blog',
-                component: 'blog'
+                component: 'blogComponent'
             });
         $urlRouterProvider.otherwise('/');
     })

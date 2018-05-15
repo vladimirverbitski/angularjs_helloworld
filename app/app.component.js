@@ -1,13 +1,13 @@
 export const AppComponent = {
     template: `
-    <header>
-        Hello world
-    </header>
-    <div>
-        <div ui-view></div>
-    </div>
-    <footer>
-        Copyright MyApp 2016.
-    </footer>
-  `
+        <header>
+            <nav>
+                <div class="title">Hello world</div> | <div><a href="/blog">Blog</a></div>
+            </nav>
+        </header>
+        
+        <ui-view></ui-view>
+        
+        <footer>Copyright MyApp 2018.</footer>
+    `
 };
