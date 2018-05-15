@@ -7,9 +7,9 @@ export const HeaderComponent = {
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/">Info <span class="sr-only">(current)</span></a></li>
-                <li><a href="/boards">Boards</a></li>
-                <li><a href="/blog">Blog</a></li>
+                <li ui-sref-active="active"><a ui-sref="info">Info</a></li>
+                <li ui-sref-active="active"><a ui-sref="board">Boards</a></li>
+                <li ui-sref-active="active"><a ui-sref="blog">Blog</a></li>
             </ul>
         </div>
       </div>

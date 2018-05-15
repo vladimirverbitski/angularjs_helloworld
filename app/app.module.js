@@ -1,6 +1,5 @@
 import "angular";
-import uiRouter from  'angular-ui-router';
-
+// import {AppConfigModule} from './config/app-config.module';
 import {AppComponent} from './app.component';
 import {ComponentsModule} from './components/components.module';
 import {CommonModule} from './common/common.module';
@@ -9,8 +8,7 @@ import './app.css';
 export const AppModule = angular
     .module('app', [
         ComponentsModule,
-        CommonModule,
-        uiRouter
+        CommonModule
     ])
     .component('app', AppComponent)
     .config(($stateProvider, $locationProvider) => {
@@ -22,7 +20,8 @@ export const AppModule = angular
         $stateProvider
         .state('app', {
             url: '/',
-            component: 'infoComponent'
+            component: 'app',
+            redirectTo: 'info'
         });
     })
     .name;
