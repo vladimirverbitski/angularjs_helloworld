@@ -17,10 +17,7 @@ export const BoardModule = angular
             .state('board', {
                 parent: 'app',
                 url: 'board',
-                component: 'board',
-                resolve: {
-                    taskData: BoardService => BoardService.getTask()
-                }
+                component: 'board'
             });
     })
     .name;

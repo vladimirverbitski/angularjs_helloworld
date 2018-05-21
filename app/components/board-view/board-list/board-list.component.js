@@ -4,29 +4,19 @@ export const BoardListComponent = {
     bindings: {
         tasks: '<',
     },
+    controllerAs: 'ctrl',
     template,
     controller: class BoardListController {
-        constructor() {
+        constructor($http) {
             'ngInject';
+            this.$http = $http;
         }
         $onInit() {
-            this.newTask = {
-                title: '',
-                selected: false
-            };
+            this.$http.get('/data/tasks.json')
+                .then(res =>
+                    this.tasks = res.data
+                );
         }
-        $onChanges(changes) {
-            if (changes.newTask) {
-                this.tasks = Object.assign({}, this.taskData);
-            }
-        }
-        addTask({ task }) {
-            if (!task) return;
-            this.tasks.unshift(task);
-            this.newTask = {
-                title: '',
-                selected: false
-            };
-        }
+        $onChanges() {}
     }
 };
