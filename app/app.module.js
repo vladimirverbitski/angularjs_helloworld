@@ -1,5 +1,6 @@
-import "angular";
-// import {AppConfigModule} from './config/app-config.module';
+import 'angular';
+import '@angular/core';
+import '@angular/common';
 import {AppComponent} from './app.component';
 import {ComponentsModule} from './components/components.module';
 import {CommonModule} from './common/common.module';
