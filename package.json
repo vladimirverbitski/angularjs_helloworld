@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "description": "A starter project for AngularJS",
-  "main": "app.module.js",
   "repository": "https://github.com/angular/angular-seed",
   "license": "MIT",
   "devDependencies": {
