@@ -3,17 +3,12 @@ import template from './board.html';
 export const BoardComponent = {
     template,
     controller: class BoardComponent {
-        constructor($http) {
+        constructor() {
             'ngInject';
-            this.$http = $http;
         }
 
-        getTask() {
-            this.$http.get('/data/tasks.json')
-                .then(res =>
-                    this.tasks = res.data
-                );
+        printHelloWorld() {
+            console.log("hello world BoardComponent");
         }
-
     }
 };
