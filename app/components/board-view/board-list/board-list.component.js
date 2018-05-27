@@ -7,16 +7,12 @@ export const BoardListComponent = {
     controllerAs: 'ctrl',
     template,
     controller: class BoardListController {
-        constructor($http) {
-            'ngInject';
-            this.$http = $http;
+        constructor(BoardComponent) {
+            this.BoardComponent = BoardComponent;
         }
+
         $onInit() {
-            this.$http.get('/data/tasks.json')
-                .then(res =>
-                    this.tasks = res.data
-                );
+            console.log(this.BoardComponent.getTask());
         }
-        $onChanges() {}
     }
 };
