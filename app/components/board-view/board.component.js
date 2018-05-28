@@ -6,9 +6,5 @@ export const BoardComponent = {
         constructor() {
             'ngInject';
         }
-
-        printHelloWorld() {
-            console.log("hello world BoardComponent");
-        }
     }
 };
