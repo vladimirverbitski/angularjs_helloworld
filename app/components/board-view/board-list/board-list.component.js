@@ -11,12 +11,13 @@ export const BoardListComponent = {
             'ngInject';
             this.$http = $http;
         }
+
         $onInit() {
             this.$http.get('/data/tasks.json')
                 .then(res =>
                     this.tasks = res.data
                 );
+            console.log("hello world from board-list");
         }
-        $onChanges() {}
     }
 };
