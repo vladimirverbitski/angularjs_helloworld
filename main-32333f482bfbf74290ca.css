@@ -1,6 +1,4 @@
-@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
-
-html, body {
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css);html, body {
   height: 100%;
 }
 
@@ -58,6 +56,3 @@ footer {
   color: #333;
 }
 
-.board-view__column .panel-primary {
-  cursor: pointer;
-}

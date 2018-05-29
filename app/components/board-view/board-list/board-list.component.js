@@ -13,6 +13,5 @@ export const BoardListComponent = {
             this.boardService.loadTasks();
         }
 
-
     }
 };
