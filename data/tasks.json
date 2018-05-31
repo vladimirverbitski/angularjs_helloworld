@@ -1,5 +1,6 @@
 {
   "0": {
+    "category": "In progress",
     "name": "Task 1",
     "description": "Lorem ipsum",
     "checklist": {
@@ -8,6 +9,7 @@
     }
   },
   "1": {
+    "category": "To Do",
     "name": "Task 2",
     "description": "Lorem ipsum",
     "checklist": {
@@ -16,7 +18,26 @@
     }
   },
   "2": {
+    "category": "In review",
     "name": "Task 3",
+    "description": "Lorem ipsum",
+    "checklist": {
+      "0": "test",
+      "1": "bebebe"
+    }
+  },
+  "3": {
+    "category": "To Do",
+    "name": "Task 4",
+    "description": "Lorem ipsum",
+    "checklist": {
+      "0": "test",
+      "1": "bebebe"
+    }
+  },
+  "4": {
+    "category": "Done",
+    "name": "Task 5",
     "description": "Lorem ipsum",
     "checklist": {
       "0": "test",
